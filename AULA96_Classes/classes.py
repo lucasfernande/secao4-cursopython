@@ -1,12 +1,11 @@
 from pessoa import Pessoa
 
-p1 = Pessoa()
-p2 = Pessoa()
+p1 = Pessoa('Lucas', 19)
+p2 = Pessoa('Mariana', 20)
 
-p1.nome = 'Lucas'
-p2.nome = 'Mariana'
+p1.comer('Maçã')
 
-print(p1.nome)
-print(p2.nome)
+p1.terminarComer()
 
-p1.fala()
+p1.comer('Bolacha')
+p1.terminarComer()
