@@ -1,7 +1,12 @@
+from datetime import datetime
+
 class Pessoa:
+    anoAtual = int(datetime.strftime(datetime.now(), '%Y')) # pegando o ano atual
+
     def __init__(self, nome, idade, comendo=False, falando=False):
         self.nome = nome # o nome da classe recebe o nome passado como parâmetro
         self.idade = idade
+        self.anoNascimento = self.getAnoNascimento()
         self.comendo = comendo
         self.falando = falando
 
@@ -43,3 +48,6 @@ class Pessoa:
 
         print(f'{self.nome} terminou de comer')
         self.comendo = False
+
+    def getAnoNascimento(self):
+        return self.anoAtual - self.idade
