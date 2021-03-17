@@ -5,9 +5,32 @@ class Pessoa:
         self.comendo = comendo
         self.falando = falando
 
+    def falar(self, assunto):
+        if self.comendo:
+            print(f'Não pode falar comendo')
+            return
+        if self.falando:
+            print(f'{self.nome} já está falando')
+            return
+
+        print(f'{self.nome} está falando sobre {assunto}')
+        self.falando = True
+
+    def pararFalar(self):
+        if not self.falando:
+            print(f'{self.nome} não está falando')
+            return
+
+        print(f'{self.nome} parou de falar')
+        self.falando = False
+
     def comer(self, alimento):
         if self.comendo: # verificando se a pessoa já está comendo
             print(f'{self.nome} já está comendo')
+            return
+
+        if self.falando:
+            print(f'Não pode falar comendo')
             return
 
         print(f'{self.nome} está comendo {alimento}')
