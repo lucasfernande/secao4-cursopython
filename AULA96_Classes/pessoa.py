@@ -1,2 +1,3 @@
 class Pessoa:
-    pass
+    def fala(self):
+        print('Pessoa está falando')

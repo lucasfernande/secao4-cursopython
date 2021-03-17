@@ -8,3 +8,5 @@ p2.nome = 'Mariana'
 
 print(p1.nome)
 print(p2.nome)
+
+p1.fala()

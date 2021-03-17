@@ -1,0 +1,6 @@
+import gerador
+
+gerador.gerador()
+
+
+
