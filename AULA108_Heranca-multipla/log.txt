@@ -1,0 +1,3 @@
+
+INFO: Motorola One Fusion não está ligado
+ERROR: Motorola One Fusion já está desconectado da internet
