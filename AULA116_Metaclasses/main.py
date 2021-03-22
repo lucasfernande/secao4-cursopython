@@ -32,3 +32,13 @@ class B(A):
 
 b = B()
 print(b.teste)
+
+print()
+print()
+
+# ----------- Criando uma classe com metaclasses ------------
+
+C = type('C', (), {'attr': 'Teste Atributo'})
+
+c = C()
+print(c.attr)
