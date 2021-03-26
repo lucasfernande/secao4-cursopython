@@ -13,7 +13,8 @@ class Pessoa:
     idade: int
 
     def __post_init__(self):  # o __post_init é executado depois do init
-        self.nome_completo = f'{self.nome} {self.sobrenome}'
+        if not isinstance(self.nome, str):
+            raise TypeError(f'Tipo inválido {type(self.nome).__name__} != str in {self}')
 
     # @property
     # def nome_completo(self):
@@ -21,4 +22,4 @@ class Pessoa:
 
 
 p1 = Pessoa('Lucas', 'Fernandes', 19)
-print(p1.nome_completo)
+p2 = Pessoa(123, 'Maria', 25)
