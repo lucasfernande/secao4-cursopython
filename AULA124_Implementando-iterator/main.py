@@ -37,7 +37,6 @@ if __name__ == '__main__':
     lista.add('Luiz')
     lista.add('Maria')
 
-    lista = list(lista)
     print(lista)
     print(lista[0])
 
@@ -49,5 +48,3 @@ if __name__ == '__main__':
 
     for v in lista:
         print(v)
-
-
